@@ -1,0 +1,14 @@
+
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+.container{
+    background-color: aqua;
+}

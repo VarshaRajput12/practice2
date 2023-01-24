@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn1, .btn2, .btn3{
+padding: 0.5rem 1rem ;
+ width: 10rem;
+}
+
+.btns{
+    margin: 2rem;
+}
+
+.para1{
+    background-color: aqua;
+    width: 30rem;
+    
+    
+}
+.para2{
+    background-color: blueviolet;
+    width: 30rem;
+    
+}
+.para3{
+    background-color: green;
+    width: 30rem;
+    
+}
+
+.container{
+    margin: 2rem;
+    display: flex;
+    gap: 2px;
+    /* justify-content: space-between; */
+}
+
+.hidden{
+    display: none;
+}
