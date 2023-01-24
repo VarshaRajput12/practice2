@@ -25,6 +25,30 @@
 // console.log(arr2)
 
 
+//===================================================
+
+// polyfill for forEach
+//  let arr = [1,2,3,4]
+
+// let arr2 = arr.map((ele)=>{
+//     return ele*2;
+// })
+
+// console.log(arr2)
+
+// Array.prototype.myMap = function(callback){
+//   for(let i = 0; i < this.length; i++){
+//     push(callback(this[i],i,this))
+//   }
+//   return newArr;
+// }
+
+//  let arr2 = arr.myMap((ele)=>{
+//     return ele*2;
+// })
+
+// console.log(arr2)
+
 //======================================================================================================================
 // polyfill for filter
 

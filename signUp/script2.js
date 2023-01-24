@@ -36,12 +36,12 @@
 // console.log(newArr)
 //===========================================================
 //question
+
 // for (var i = 0; i < 4; i++) {
-//     function a(i){
 //      setTimeout(() => console.log(i), 1000*i);
-//     }
-//     a(i)
-// }
+// };
+
+
 // try it with IIFE
 
 //===================================================================
@@ -72,6 +72,22 @@
 // newFun() // execute
 // newFun() //not execute
 // newFun() // execute
+// let flag = 0;
+// let fun = (a = "varsha", b = 3) => {
+//      flag++;
+// //   console.log(b, flag);
+//   if (flag == b) {
+//     console.log(a);
+//     flag = 0;
+//   }
+//   return;
+// };
+// fun();
+// fun();
+// fun();
+// fun();
+// fun();
+// fun();
 
 // function calling exicution depend on the num which we passed in the function param
 //====================================================
@@ -98,8 +114,6 @@
 // function add(){
 //     console.log("this is add function")
 // }
-
-
 
 //==========================================================
 
