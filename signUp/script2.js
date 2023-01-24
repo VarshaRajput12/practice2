@@ -56,15 +56,6 @@
 
 // fetchAPI(apiUrl);
 
-//=======================================================================
-
-// async function fetchAPI(){
-//   const result = await fetch("https://jsonplaceholder.typicode.com/users/");
-//   const data = await result.json();
-//   console.log(data)
-// };
-// fetchAPI();
-
 //==================================================================
 //question
 // let newFun = sampler("varsha", 2);
