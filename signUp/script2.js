@@ -201,3 +201,30 @@
 // };
 
 // checkPassword(user.loginSuccessful.bind(user), user.loginFailed.bind(user))
+
+
+//================================================================
+
+// let str = "i love my india";
+// let str2 = "aeiou"
+
+// function toUpperCase(str){
+//     let len = str.length;
+//     let newStr = ""
+
+//     for(let i = 0 ; i<len ; i++){
+//         if( str[i] == "a" ||  str[i] == "e" || str[i] == "i" ||  str[i] == "o" || str[i] == "u"){
+//           newStr+= str[i].toUpperCase()
+//         }else{
+//            newStr+= str[i];
+//         }
+//     }return newStr
+// }
+
+// console.log(toUpperCase('i love my india'))
+
+
+// let result = str.split('').map(function(ele){
+//     return (str2.indexOf(ele) > -1) ? ele.toUpperCase():ele;
+// })
+// console.log(result.join(""))

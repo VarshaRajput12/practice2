@@ -82,3 +82,84 @@
 // console.log(arr2)
 
 //=============================================================================================================
+
+
+//polyfills for call, apply and bind
+
+
+
+//call
+// let obj = {
+//     name: "Varsha",
+//     surName: "Rajput"
+// }
+
+// function fullname(age, city){
+//     console.log(`${this.name} ${this.surName} my age is ${age} i'm from ${city}`)
+// }
+
+// Function.prototype.myCall = function(content = {}, ...args){
+// if(typeof this !== "function"){
+//     throw new Error(`${this} is not callable`)
+// }
+// content.fn = this;
+// content.fn(...args)
+
+// }
+
+// fullname.call(obj, 21, "delhi");
+// fullname.myCall(obj, 21, "delhi");
+
+//===================================================================================
+
+//apply
+
+// let obj = {
+//   name: "Varsha",
+//   surName: "Rajput",
+// };
+
+// function fullname(age, city) {
+//   console.log(`${this.name} ${this.surName} my age is ${age} i'm from ${city}`);
+// }
+
+// Function.prototype.myApply = function (content = {}, args = []) {
+//   if (typeof this !== "function") {
+//     throw new Error(`${this} is not callable`);
+//   }
+//   if(!Array.isArray(args) ){
+//     throw new Error(`CreatListFromArrayLike called on non-object`);
+//   }
+//   content.fn = this;
+//   content.fn(...args);
+// };
+
+// // fullname.apply(obj, [21, "delhi"]);
+// fullname.myApply(obj, [21, "delhi"]);
+
+
+
+//bind
+
+let obj = {
+  name: "Varsha",
+  surName: "Rajput",
+};
+
+function fullname(age, city) {
+  console.log(`${this.name} ${this.surName} my age is ${age} i'm from ${city}`);
+}
+
+Function.prototype.myBind = function (content = {}, ...args) {
+  if (typeof this !== "function") {
+    throw new Error(`${this} cannot be bound as it is not callable`);
+  }
+  
+  content.fn = this;
+  return function(){
+    return content.fn(args,...args)
+  }
+};
+
+// fullname.apply(obj, [21, "delhi"]);
+fullname.myBind(obj, 21, "delhi");
