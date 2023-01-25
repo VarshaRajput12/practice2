@@ -41,7 +41,6 @@
 //      setTimeout(() => console.log(i), 1000*i);
 // };
 
-
 // try it with IIFE
 
 //===================================================================
@@ -122,3 +121,83 @@
 // console.log(output)
 
 //=========================================================
+
+// call apply bind  (Explicit binding)
+
+// const animals = [{species: "Lion", name: "king"}, {species: "whale", name: "Queen"}];
+
+// //make use of this function to print animals from that array of object
+
+// function printAnimals(i){
+//     this.print = function(){
+//         console.log(`${i} ${this.species} : ${this.name}`)
+//     }
+//     this.print();
+// }
+// for (let i = 0; i < animals.length; i++) {
+//     printAnimals.call(animals[i], i)
+// }
+
+//===============================================================
+
+//Append an aaray to another array
+
+// const arr1 = ["a", "b"]
+// const arr2 = [1, 2, 3]
+
+// arr1.push.bind(arr1, arr2)
+// console.log(arr1())
+
+// using apply find max/min in an array
+
+// const arr = [4, 5, 9,100, 1, 25, 15];
+
+// console.log(Math.max.apply(null, arr)); 
+// console.log(Math.min.apply(null, arr)); 
+
+// output base questions=======================
+
+// function fun(){
+//     console.log(this); // here the context of bind is fixed so it points to the window object
+// }
+
+// let user = {
+//     g: fun.bind(null)
+// }
+// user.g();
+
+
+// -------------------------------------
+
+//bind chaining
+
+// function fun(){
+//     console.log(this.name);
+// }
+
+// fun = fun.bind({name: "john"}).bind({name: "ann"})
+
+// fun() // once a function is bound to a perticular object if will always bound to that object (bind chaining does't exist)
+
+//-----------------------------
+// function checkPassword(success, failed) {
+//     let password = prompt("password?", "");
+//     if (password == "varsha") {
+//         success();
+//     } else {
+//         failed();
+//     }
+// }
+
+// let user = {
+//     name : "Varsha Rajput",
+//     loginSuccessful(){
+//         console.log(`${this.name} logged in`)
+//     },
+//     loginFailed(){
+//         console.log(`${this.name} failed to logged in`)
+//     },
+
+// };
+
+// checkPassword(user.loginSuccessful.bind(user), user.loginFailed.bind(user))
